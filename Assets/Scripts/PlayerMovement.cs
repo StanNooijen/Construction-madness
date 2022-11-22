@@ -7,13 +7,13 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D m_Rigidbody;
     float m_Speed;
-    
+    public float jumpAmount = 10;
+
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody2D>();
         m_Speed = 10.0f;
     }
-    //test
 
     void Update()
     {
@@ -27,9 +27,9 @@ public class PlayerMovement : MonoBehaviour
             m_Rigidbody.velocity = -transform.right * m_Speed;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
-            transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * m_Speed);
+            m_Rigidbody.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
         }
     }
 }
