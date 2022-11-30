@@ -6,30 +6,43 @@ public class PlayerMovement : MonoBehaviour
 {
 
     Rigidbody2D m_Rigidbody;
-    float m_Speed;
-    public float jumpAmount = 10;
+    float speed = 10f;
+    public float jumpAmount = 0;
+    public float jumpHeight = 10f;
 
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody2D>();
-        m_Speed = 10.0f;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Floor"))
+        {
+            Debug.Log("floor");
+            jumpAmount = 0;
+        }
     }
 
     void Update()
     {
         if (Input.GetKey(KeyCode.D))
         {
-            m_Rigidbody.velocity = transform.right * m_Speed;
+            transform.Translate(transform.right * speed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            m_Rigidbody.velocity = -transform.right * m_Speed;
+            transform.Translate(-transform.right * speed * Time.deltaTime);
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (jumpAmount == 0)
         {
-            m_Rigidbody.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
+            if (Input.GetButtonDown("Jump"))
+            {
+                m_Rigidbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+                jumpAmount++;
+            }
         }
     }
 }
