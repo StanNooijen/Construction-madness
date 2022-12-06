@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    BoxCollider2D Ground;
     Rigidbody2D m_Rigidbody;
     float speed = 10f;
-    public float jumpAmount = 0;
+    public int jumpcount = 0;
     public float jumpHeight = 10f;
 
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody2D>();
+        Ground = GetComponent<BoxCollider2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Floor"))
+        if (collision.gameObject.CompareTag("Floor"))
         {
-            Debug.Log("floor");
-            jumpAmount = 0;
+            Debug.Log("Floor");
+            jumpcount = 0;
         }
     }
 
@@ -35,13 +36,13 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.Translate(-transform.right * speed * Time.deltaTime);
         }
-
-        if (jumpAmount == 0)
+        
+        if (Input.GetButtonDown("Jump"))
         {
-            if (Input.GetButtonDown("Jump"))
+            if (jumpcount == 0)
             {
                 m_Rigidbody.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-                jumpAmount++;
+                jumpcount++;
             }
         }
     }
