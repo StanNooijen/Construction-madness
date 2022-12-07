@@ -9,8 +9,7 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(collision.gameObject);
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("");
             Debug.Log("Scene switches");
         }
     }
