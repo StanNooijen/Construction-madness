@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D m_Rigidbody;
     float speed = 10f;
     public int jumpcount = 0;
-    public float jumpHeight = 10f;
+    public float jumpHeight = 20f;
 
     void Start()
     {

@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour
 {
 
     Rigidbody2D rb;
-    public float force = 15f;
+    public float force = 10f;
 
     void Start()
     {
@@ -33,6 +33,5 @@ public class Ball : MonoBehaviour
             force = 10f;
             rb.velocity = Vector2.right * force;
         }
-
     }
 }
