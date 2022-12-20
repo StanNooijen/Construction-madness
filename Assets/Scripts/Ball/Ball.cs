@@ -25,7 +25,7 @@ public class Ball : MonoBehaviour
         if (collision.gameObject.CompareTag("WallRight"))
         {
             force = -10f;
-            rb.velocity = Vector2.left * force;
+            rb.velocity = Vector2.right * force;
         }
 
         if (collision.gameObject.CompareTag("WallLeft"))
@@ -33,5 +33,11 @@ public class Ball : MonoBehaviour
             force = 10f;
             rb.velocity = Vector2.right * force;
         }
+
+        if (collision.gameObject.CompareTag("DeleteBall"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

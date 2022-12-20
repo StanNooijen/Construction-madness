@@ -5,9 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
-  - WallLeft
-  - WallRight
   - Hammer
+  - Wall
+  - HammerCollider
+  - WallRight
+  - WallLeft
+  - DeleteBall
   layers:
   - Default
   - TransparentFX
