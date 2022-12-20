@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenuTwo : MonoBehaviour
 {
-
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
@@ -49,5 +48,4 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
     }
-
 }

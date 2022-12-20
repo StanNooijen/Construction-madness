@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 344054263}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -628,8 +628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b36854c73a1b0014e916aeebf7dd9a5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballPrefab: {fileID: 3567925213835145585, guid: e466d3941dc26994184f45a0f9afef3a, type: 3}
-  ballInterval: 6
+  ballPrefab: {fileID: 6089264654441691912, guid: e466d3941dc26994184f45a0f9afef3a, type: 3}
+  ballInterval: 1
   ballSpawnposition: {fileID: 359915463}
 --- !u!4 &359915463
 Transform:
