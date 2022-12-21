@@ -7,6 +7,6 @@ public class GoToLevelTwo : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene("Kevin Scene"); // change to level 2 eventually
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
     }
 }
