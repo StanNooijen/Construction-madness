@@ -1156,6 +1156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 7320878360747641935, guid: 5a62e25ccac0d55409b11cb5d673990e, type: 3}
+      propertyPath: hammerInterval
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a62e25ccac0d55409b11cb5d673990e, type: 3}
 --- !u!1 &1147831209
