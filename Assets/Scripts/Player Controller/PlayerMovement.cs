@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    BoxCollider2D Ground;
     Rigidbody2D m_Rigidbody;
     float speed = 10f;
     public int jumpcount = 0;
@@ -13,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody2D>();
-        Ground = GetComponent<BoxCollider2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

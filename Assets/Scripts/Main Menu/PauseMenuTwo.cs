@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseMenuTwo : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class PauseMenuTwo : MonoBehaviour
             else
             {
                 Pause();
-
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(ActiveButton);
             }
         }
     }
