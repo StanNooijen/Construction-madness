@@ -7,7 +7,7 @@ public class PauseMenuTwo : MonoBehaviour
 {
     public static bool GameIsPaused = false;
 
-    public GameObject pauseMenuUI;
+    public GameObject pauseMenuUI, ActiveButton;
 
     void Update()
     {
@@ -20,6 +20,7 @@ public class PauseMenuTwo : MonoBehaviour
             else
             {
                 Pause();
+
             }
         }
     }
