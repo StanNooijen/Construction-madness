@@ -9,18 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 2c513ad8bd719ab41b1b4c120cab791d
   - enabled: 1
-    path: Assets/Scenes/Stan Two.unity
-    guid: 5f6d94499b0924f43aa084c99f1b1d32
+    path: Assets/Scenes/Level 1.unity
+    guid: 5e2a50aca81e4c7458709b86b068444c
   - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: e8acb06fdb201d24ca0932d91a2da35f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: b44cf3d6155e04f4ba1ad0ae760da973
   m_configObjects: {}

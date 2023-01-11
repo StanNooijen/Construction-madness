@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BobExplosionTrigger : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class BobExplosionTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         Destroy(bob);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
