@@ -21,7 +21,7 @@ public class BobExplosionTrigger : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         Destroy(bob);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
