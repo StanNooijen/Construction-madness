@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
-            Debug.Log("Floor");
             jumpcount = 0;
         }
     }
