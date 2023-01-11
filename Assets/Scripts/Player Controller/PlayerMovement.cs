@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     float speed = 10f;
     public int jumpcount = 0;
     public float jumpHeight = 20f;
+    public Animator animator;
 
     void Start()
     {
@@ -25,16 +26,27 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(transform.right * speed * Time.deltaTime);
+            animator.SetBool("RunRight", true);
+        }
+        else
+        {
+            animator.SetBool("RunRight", false);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(-transform.right * speed * Time.deltaTime);
+            animator.SetBool("RunLeft", true);
         }
-        
+        else
+        {
+            animator.SetBool("RunLeft", false);
+        }
+
         if (Input.GetButtonDown("Jump"))
         {
             if (jumpcount == 0)
