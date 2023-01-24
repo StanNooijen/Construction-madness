@@ -24,13 +24,13 @@ public class Ball : MonoBehaviour
 
         if (collision.gameObject.CompareTag("WallRight"))
         {
-            force = -10f;
+            force = -12f;
             rb.velocity = Vector2.right * force;
         }
 
         if (collision.gameObject.CompareTag("WallLeft"))
         {
-            force = 10f;
+            force = 12f;
             rb.velocity = Vector2.right * force;
         }
 
